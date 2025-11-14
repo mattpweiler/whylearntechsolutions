@@ -63,6 +63,24 @@ export function EntryOptionsSection() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
+        <StartOptionCard
+            heading="Project Fit Application"
+            badge="Free · 5 min"
+            copy="Fill out the short form so I can review scope, budget, and timeline. If it’s a fit, I’ll invite you to book a free exploration call. If not, I’ll still share suggestions."
+            bullets={[
+              "Designed for builds that fit your price range",
+              "Lets me prep before we ever talk",
+              "Great for fellows, creators, agencies",
+            ]}
+            primaryCta={{
+              label: "Submit your project idea",
+              href: "#contact",
+            }}
+            secondaryCta={{
+              label: "Email me",
+              href: "mailto:whylearnwednesdays@gmail.com?subject=Project%20details",
+            }}
+          />
           <StartOptionCard
             heading="Paid Strategy Intensive"
             badge="60 mins · $120"
@@ -75,25 +93,6 @@ export function EntryOptionsSection() {
             primaryCta={{
               label: "Book a paid call",
               href: "https://cal.com/whylearntech/60mins",
-            }}
-          />
-
-          <StartOptionCard
-            heading="Project Fit Application"
-            badge="Free · 5 min"
-            copy="Fill out the short form so I can review scope, budget, and timeline. If it’s a fit, I’ll invite you to book a free exploration call. If not, I’ll still share suggestions."
-            bullets={[
-              "Designed for builds that fit your price range",
-              "Lets me prep before we ever talk",
-              "Great for fellows, creators, agencies",
-            ]}
-            primaryCta={{
-              label: "Submit the project brief",
-              href: "#contact",
-            }}
-            secondaryCta={{
-              label: "Email me",
-              href: "mailto:whylearnwednesdays@gmail.com?subject=Project%20details",
             }}
           />
         </div>

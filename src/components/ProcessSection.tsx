@@ -34,7 +34,7 @@ export function ProcessSection() {
         <div className="grid gap-4 md:grid-cols-3">
           <StepCard
             step="01"
-            title="Book a call"
+            title="A Free Exploration Call"
             body="We’ll talk through your idea, what’s broken in your current workflow, and what success actually looks like for you."
           />
           <StepCard

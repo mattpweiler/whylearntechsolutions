@@ -18,20 +18,19 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-wrap gap-3">
-            <a
+          <a
+              href="#contact"
+              className="rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-sky-500/30 transition hover:bg-sky-400"
+            >
+              Submit Your Project Idea
+            </a>
+              <a
               href="https://cal.com/whylearntech/60mins"
               target="_blank"
               rel="noreferrer"
-              className="rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-sky-500/30 transition hover:bg-sky-400"
-            >
-              Book a 1:1 Call
-            </a>
-
-            <a
-              href="#contact"
               className="rounded-lg border border-slate-600 px-5 py-2.5 text-sm font-semibold text-slate-100 transition hover:border-sky-400 hover:text-sky-200"
             >
-              Apply for a Build
+              Book a Call
             </a>
           </div>
 
