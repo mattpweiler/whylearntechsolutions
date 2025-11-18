@@ -22,7 +22,7 @@ export default function AppsPage() {
         <p className="text-xs uppercase tracking-[0.3em] text-slate-500">WhyLearn Apps</p>
         <h1 className="mt-4 text-4xl font-semibold text-slate-900">Tools to help you learn, build, and ship.</h1>
         <p className="mt-4 max-w-2xl text-base text-slate-600">
-          I&apos;m building a suite of calm, focused apps for operators and creatives. Each one is small, intentional, and designed to
+          I&apos;m building a suite of custom, focused apps for operators and creatives. Each one is small, intentional, and designed to
           remove friction. Here&apos;s what&apos;s cooking.
         </p>
       </section>

@@ -8,7 +8,7 @@ const navCards = [
   },
   {
     title: "Software Consulting",
-    description: "Strategy, design, and build support for calm software, AI workflows, and lean teams.",
+    description: "Strategy, design, and build support for custom software, AI workflows, and lean teams.",
     href: "/consulting",
   },
   {
@@ -85,7 +85,7 @@ export default function Home() {
       <section className="grid gap-10 rounded-3xl border border-slate-200 bg-white/80 p-8 md:grid-cols-2">
         <div className="space-y-4">
           <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Why I built this</p>
-          <h3 className="text-2xl font-semibold text-slate-900">WhyLearn is a calm space to build, learn, and share momentum.</h3>
+          <h3 className="text-2xl font-semibold text-slate-900">WhyLearn is a custom space to build, learn, and share momentum.</h3>
           <p className="text-sm text-slate-600">
             The internet feels louder than ever. WhyLearn is my answer: thoughtful videos, documented experiments, and modern software
             that keeps teams focused on what matters. No fluff, no jargon,just honest tools and stories from the journey.
@@ -96,7 +96,7 @@ export default function Home() {
           <ul className="space-y-3 text-sm text-slate-600">
             <li className="flex items-start gap-3">
               <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-900" />
-              Help builders master tools faster with calm, practical education.
+              Help builders master tools faster with custom, practical education.
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-900" />

@@ -38,7 +38,9 @@ export function SiteHeader() {
         </nav>
 
         <Link
-          href="/consulting#contact"
+          href="https://cal.com/whylearntech/60mins"
+          target="_blank"
+          rel="noreferrer"
           className="hidden rounded-full border border-slate-900 px-4 py-1.5 text-sm font-medium text-slate-900 transition hover:-translate-y-0.5 md:inline-flex"
         >
           Book a Call

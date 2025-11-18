@@ -7,7 +7,7 @@ export default function RevenuePage() {
         <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Revenue</p>
         <h1 className="mt-4 text-4xl font-semibold text-slate-900">Finance + Income Tracker</h1>
         <p className="mt-4 max-w-3xl text-base text-slate-600">
-          Designed for creators and solo founders who want a single calm dashboard for cash flow, subscription income, and runway.
+          Designed for creators and solo founders who want a single custom dashboard for cash flow, subscription income, and runway.
           Revenue connects to Stripe, manual invoices, and bank exports—then turns the mess into clarity.
         </p>
       </section>
@@ -34,7 +34,7 @@ export default function RevenuePage() {
           <h2 className="text-xl font-semibold text-slate-900">Why it matters</h2>
           <p className="mt-3 text-sm text-slate-600">
             Money tools command higher willingness to pay than generic productivity apps. Revenue is the flagship WhyLearn product:
-            calm UI, accurate data, and founder-friendly pricing.
+            custom UI, accurate data, and founder-friendly pricing.
           </p>
           <div className="mt-6 inline-flex items-center rounded-full bg-slate-900 px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white">
             Launching soon

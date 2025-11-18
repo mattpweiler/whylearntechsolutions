@@ -1,20 +1,35 @@
 import Link from "next/link";
+import Image from "next/image";
+import mattPhoto from "../../../images/mattphoto.png";
 
-const timeline = [
+const timelineEntries = [
   {
-    title: "Software engineering roots",
-    body: "Built internal tools and data products for scaling tech teams, learning how to ship clean, maintainable systems.",
-    period: "2016 – 2020",
+    period: "2015 – 2024",
+    title: "Corporate software background and education",
+    bullets: [
+      "Studied Computer Science at the University of Wisconsin. Received My Bachelors in CS in 2018.",
+      "Worked as a Senior Software Engineer and Shipped insurance apps and internal, data-heavy tools for two Fortune 500 companies during 2018-2024.",
+      "Focused on clean, maintainable, scalable software while operating as a senior engineer inside regulated orgs.",
+    ],
   },
   {
+    period: "2024 – Present",
     title: "YouTube & teaching",
-    body: "Started documenting builds, tutorials, and experiments to make engineering less intimidating.",
-    period: "2020 – Present",
+    icon: true,
+    bullets: [
+      "Grew @WhyLearnTech to 60k subs by treating it like a public lab of life, entrepreneurship, finance, and gaming experiments.",
+      "Share practical life advice for leveling up your income and staying consistent.",
+      "Consult creators and founders on growing online brands with honest storytelling.",
+    ],
   },
   {
-    title: "Entrepreneurship",
-    body: "Launched WhyLearn to combine consulting, product building, and public learning into one ecosystem.",
-    period: "Now",
+    period: "2024 - Prenent",
+    title: "Freelance Software Engineering",
+    bullets: [
+      "Launched WhyLearn to combine consulting, product building, and public learning in one ecosystem.",
+      "Partner with founders to scope, design, and ship AI-powered workflows and software.",
+      "Build the WhyLearn app suite (Revenue, 20s Crisis + Productivity) alongside client work.",
+    ],
   },
 ];
 
@@ -23,16 +38,16 @@ export default function AboutPage() {
     <div className="space-y-14">
       <section className="grid gap-8 rounded-3xl border border-slate-200 bg-white/90 p-8 md:grid-cols-[0.6fr,1fr]">
         <div className="flex flex-col items-center justify-center">
-          <div className="h-48 w-48 rounded-3xl bg-[radial-gradient(circle_at_top,_#dbeafe,_#e2e8f0)] shadow-xl shadow-slate-200">
-            <span className="flex h-full items-center justify-center text-3xl font-semibold text-slate-700">WhyLearnTech</span>
+          <div className="h-48 w-48 overflow-hidden rounded-3xl border border-slate-200 bg-[radial-gradient(circle_at_top,_#dbeafe,_#e2e8f0)] shadow-xl shadow-slate-200">
+            <Image src={mattPhoto} alt="Matt Weiler" className="h-full w-full object-cover" priority />
           </div>
         </div>
         <div className="space-y-4">
           <p className="text-xs uppercase tracking-[0.3em] text-slate-500">About Matt</p>
-          <h1 className="text-3xl font-semibold text-slate-900 md:text-4xl">I build calm software and share the process.</h1>
+          <h1 className="text-3xl font-semibold text-slate-900 md:text-4xl">I build software and share the process.</h1>
           <p className="text-base text-slate-600">
             I&apos;m a full-stack engineer who left big-company life to help founders, creators, and small teams build useful software
-            without the chaos. WhyLearn is the home for all of it,client work, products, education, and experimentation.
+            without the chaos. WhyLearn is the home for all of it, client work, products, education, and experimentation.
           </p>
           <p className="text-base text-slate-600">
             My work blends thoughtful design, practical engineering, and storytelling. Whether it&apos;s a custom RAG workflow, a lean SaaS,
@@ -50,12 +65,18 @@ export default function AboutPage() {
         <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Story</p>
         <h2 className="mt-3 text-2xl font-semibold text-slate-900">The path so far</h2>
         <div className="mt-8 space-y-6">
-          {timeline.map((item) => (
+          {timelineEntries.map((item) => (
             <div key={item.title} className="grid gap-4 rounded-2xl border border-slate-200 bg-slate-50/70 p-5 md:grid-cols-[1fr,3fr]">
               <div className="text-sm font-semibold text-slate-500">{item.period}</div>
               <div>
-                <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
-                <p className="mt-1 text-sm text-slate-600">{item.body}</p>
+                <ul className="mt-2 space-y-2 text-sm text-slate-600">
+                  {item.bullets.map((bullet) => (
+                    <li key={bullet} className="flex items-start gap-3">
+                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-900" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
@@ -87,7 +108,9 @@ export default function AboutPage() {
             what you&apos;re building and how I can help.
           </p>
           <Link
-            href="/consulting"
+            href="https://cal.com/whylearntech/60mins"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center rounded-full bg-[#1f4ed8] px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/30 transition hover:-translate-y-0.5 hover:bg-[#1b44c2]"
           >
             Book a Call

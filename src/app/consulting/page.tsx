@@ -38,7 +38,7 @@ export default function ConsultingPage() {
     <div className="space-y-12">
       <section className="rounded-3xl border border-slate-200 bg-white/90 px-8 py-12">
         <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Software Consulting</p>
-        <h1 className="mt-4 text-4xl font-semibold text-slate-900">Strategy, design, and builds for calm teams.</h1>
+        <h1 className="mt-4 text-4xl font-semibold text-slate-900">Strategy, design, and builds for custom teams.</h1>
         <p className="mt-4 max-w-3xl text-base text-slate-600">
           I work with founders, creators, and operators who want custom software that actually ships. From RAG-powered assistants to
           lean SaaS dashboards, we&apos;ll scope what matters, plan clearly, and build quickly.

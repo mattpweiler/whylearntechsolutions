@@ -9,7 +9,7 @@ export default function BuiltPage() {
         <p className="text-xs uppercase tracking-[0.3em] text-slate-500">What I&apos;ve built</p>
         <h1 className="mt-4 text-4xl font-semibold text-slate-900">Proof in shipped software.</h1>
         <p className="mt-4 max-w-3xl text-base text-slate-600">
-          From regulated Fortune 500 systems to scrappy indie launches, I obsess over calm execution. Below is a snapshot of the work
+          From regulated Fortune 500 systems to scrappy indie launches, I obsess over custom execution. Below is a snapshot of the work
           that shaped WhyLearn.
         </p>
       </section>
@@ -44,7 +44,7 @@ export default function BuiltPage() {
         <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Product lab</p>
         <h2 className="mt-2 text-2xl font-semibold text-slate-900">Apps I&apos;m building now</h2>
         <p className="mt-2 text-sm text-slate-600">
-          Beyond client work, I&apos;m shipping two focused tools under WhyLearn: Revenue (a finance tracker) and the combined 20s Crisis + Productivity companion for calm momentum.
+          Beyond client work, I&apos;m shipping two focused tools under WhyLearn: Revenue (a finance tracker) and the combined 20s Crisis + Productivity companion for custom momentum.
         </p>
         <Link
           href="/apps"
