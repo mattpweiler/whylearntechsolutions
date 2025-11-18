@@ -8,16 +8,10 @@ const apps = [
     href: "/apps/revenue",
   },
   {
-    name: "20s Crisis Companion",
-    rationale: "Brand Alignment",
-    description: "A grounded app that mirrors the WhyLearn narrative—guiding relentless builders through clarity exercises, journaling, and curated prompts for the 'figure-it-out' decade.",
+    name: "20s Crisis + WhyLearn Productivity",
+    rationale: "Brand alignment & velocity",
+    description: "One companion app that blends reflective prompts with a minimalist productivity coach—perfect for builders navigating their 20s.",
     href: "/apps/twenties",
-  },
-  {
-    name: "WhyLearn Productivity",
-    rationale: "Speed to launch",
-    description: "A lightweight workflow coach with tasks, daily systems, and calm reminders. Minimal MVP scope so it can ship in a week and gather feedback fast.",
-    href: "/apps/productivity",
   },
 ];
 
@@ -33,7 +27,7 @@ export default function AppsPage() {
         </p>
       </section>
 
-      <section className="grid gap-6 md:grid-cols-3">
+      <section className="grid gap-6 md:grid-cols-2">
         {apps.map((app) => (
           <Link
             key={app.name}

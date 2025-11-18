@@ -4,11 +4,11 @@ export default function TwentiesPage() {
   return (
     <div className="space-y-10">
       <section className="rounded-3xl border border-slate-200 bg-white/95 px-8 py-12">
-        <p className="text-xs uppercase tracking-[0.3em] text-slate-500">20s Crisis Companion</p>
-        <h1 className="mt-4 text-4xl font-semibold text-slate-900">A calm guide for figure-it-out years</h1>
+        <p className="text-xs uppercase tracking-[0.3em] text-slate-500">20s Crisis + Productivity</p>
+        <h1 className="mt-4 text-4xl font-semibold text-slate-900">Mindset meets momentum</h1>
         <p className="mt-4 max-w-3xl text-base text-slate-600">
-          WhyLearn started with my own quarter-life pivot. This app distills the prompts, journaling systems, and accountability loops I
-          used to quit corporate, pick myself back up, and keep moving.
+          This combined app mirrors the WhyLearn story: reflective prompts for the quarter-life pivot plus a lightweight productivity coach
+          that helps you turn clarity into action.
         </p>
       </section>
 
@@ -18,15 +18,19 @@ export default function TwentiesPage() {
           <ul className="mt-4 space-y-3 text-sm text-slate-600">
             <li className="flex gap-3">
               <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-900" />
-              Daily reflection prompts anchored around career, wellness, and courage.
+              Daily reflection prompts anchored around career, wellness, courage, and identity.
             </li>
             <li className="flex gap-3">
               <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-900" />
-              Weekly missions to build momentum—tiny experiments, not overwhelming to-do lists.
+              Weekly missions plus a focus queue: one core move, two supporting tasks, and a reflection check-in.
             </li>
             <li className="flex gap-3">
               <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-900" />
-              Audio lessons and short videos directly from the WhyLearn YouTube backlog.
+              Audio lessons, short videos, and routines builder for content, health, and creative consistency.
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-900" />
+              Hooks into Revenue (later) so your goals align with income targets.
             </li>
           </ul>
         </div>
@@ -45,7 +49,9 @@ export default function TwentiesPage() {
       <section className="rounded-3xl border border-slate-200 bg-slate-900 px-8 py-10 text-white">
         <div className="space-y-4">
           <h2 className="text-2xl font-semibold">Want launch updates?</h2>
-          <p className="text-sm text-slate-200">Share your email in the contact form and mention “20s Crisis” so I can ping you first.</p>
+          <p className="text-sm text-slate-200">
+            Share your email in the contact form and mention “20s Productivity” so I can ping you first.
+          </p>
           <div className="flex flex-wrap gap-3 text-sm">
             <Link
               href="/consulting#contact"

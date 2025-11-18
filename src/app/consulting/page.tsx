@@ -35,7 +35,7 @@ const processSteps = ["Discovery", "Plan", "Build", "Launch", "Support"];
 
 export default function ConsultingPage() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-12">
       <section className="rounded-3xl border border-slate-200 bg-white/90 px-8 py-12">
         <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Software Consulting</p>
         <h1 className="mt-4 text-4xl font-semibold text-slate-900">Strategy, design, and builds for calm teams.</h1>
@@ -60,6 +60,10 @@ export default function ConsultingPage() {
           </Link>
         </div>
       </section>
+
+      <div className="-mt-6">
+        <ContactSection />
+      </div>
 
       <section className="grid gap-6 md:grid-cols-3">
         {serviceHighlights.map((service) => (
@@ -111,17 +115,33 @@ export default function ConsultingPage() {
       <section className="rounded-3xl border border-slate-200 bg-white p-8">
         <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Process</p>
         <h2 className="mt-3 text-2xl font-semibold text-slate-900">How we work together</h2>
-        <div className="mt-8 grid gap-4 md:grid-cols-5">
+        <div className="mt-8 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           {processSteps.map((step, index) => (
-            <div key={step} className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
-              <p className="text-xs font-semibold text-slate-400">0{index + 1}</p>
-              <p className="mt-2 text-sm font-semibold text-slate-900">{step}</p>
+            <div key={step} className="flex flex-col items-center gap-3 md:flex-row md:gap-4">
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 px-6 py-4 text-center md:min-w-[140px]">
+                <p className="text-xs font-semibold text-slate-400">0{index + 1}</p>
+                <p className="mt-2 text-sm font-semibold text-slate-900">{step}</p>
+              </div>
+              {index < processSteps.length - 1 && (
+                <>
+                  <div className="hidden md:flex">
+                    <svg width="50" height="20" viewBox="0 0 50 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 10H46" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round" />
+                      <path d="M40 4L46 10L40 16" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round" />
+                    </svg>
+                  </div>
+                  <div className="md:hidden text-slate-400">
+                    <svg width="15" height="30" viewBox="0 0 15 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.5 0V26" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round" />
+                      <path d="M2 20L7.5 26L13 20" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round" />
+                    </svg>
+                  </div>
+                </>
+              )}
             </div>
           ))}
         </div>
       </section>
-
-      <ContactSection />
     </div>
   );
 }

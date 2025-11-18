@@ -7,7 +7,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Me" },
   { href: "/consulting", label: "Software Consulting" },
-  { href: "/apps", label: "Apps" },
+  { href: "/apps", label: "Apps for You" },
 ];
 
 export function SiteHeader() {
