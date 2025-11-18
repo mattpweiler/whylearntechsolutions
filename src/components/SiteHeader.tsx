@@ -17,7 +17,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <Link href="/" className="font-semibold tracking-tight text-slate-900">
-          WhyLearn
+          WhyLearnTech
         </Link>
 
         <nav className="hidden gap-4 text-sm text-slate-600 md:flex">

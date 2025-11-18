@@ -88,7 +88,7 @@ export default function AboutPage() {
           </p>
           <Link
             href="/consulting"
-            className="inline-flex items-center rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-slate-900 transition hover:-translate-y-0.5"
+            className="inline-flex items-center rounded-full bg-[#1f4ed8] px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/30 transition hover:-translate-y-0.5 hover:bg-[#1b44c2]"
           >
             Book a Call
           </Link>

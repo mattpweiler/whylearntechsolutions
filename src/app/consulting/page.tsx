@@ -46,7 +46,7 @@ export default function ConsultingPage() {
         <div className="mt-6 flex flex-wrap gap-3 text-sm">
           <Link
             href="#contact"
-            className="inline-flex items-center rounded-full bg-slate-900 px-6 py-2.5 font-semibold text-white transition hover:-translate-y-0.5"
+            className="inline-flex items-center rounded-full bg-[#1f4ed8] px-6 py-2.5 font-semibold text-white shadow-lg shadow-blue-200/70 transition hover:-translate-y-0.5 hover:bg-[#1b44c2]"
           >
             Tell me about your project
           </Link>

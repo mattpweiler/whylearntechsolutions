@@ -40,6 +40,20 @@ export default function BuiltPage() {
         </div>
       </section>
 
+      <section className="rounded-3xl border border-slate-200 bg-white/80 p-8">
+        <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Product lab</p>
+        <h2 className="mt-2 text-2xl font-semibold text-slate-900">Apps I&apos;m building now</h2>
+        <p className="mt-2 text-sm text-slate-600">
+          Beyond client work, I&apos;m shipping two focused tools under WhyLearn: Revenue (a finance tracker) and the combined 20s Crisis + Productivity companion for calm momentum.
+        </p>
+        <Link
+          href="/apps"
+          className="mt-6 inline-flex items-center rounded-full border border-slate-900 px-5 py-2 text-sm font-semibold text-slate-900 transition hover:-translate-y-0.5"
+        >
+          Go to my apps
+        </Link>
+      </section>
+
       <section className="rounded-3xl border border-slate-200 bg-white/90 p-8">
         <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Freelance & advisory</p>
         <h2 className="mt-3 text-2xl font-semibold text-slate-900">Client partners</h2>
