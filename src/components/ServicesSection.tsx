@@ -77,7 +77,7 @@ export function ServicesSection() {
             <ServiceCard
               title="Landing Pages & Microsites"
               tag="Marketing · Lead Gen"
-              description="Fast, clean marketing sites so people understand what you do — and can book a call or join your funnel in two clicks."
+              description="Fast, clean marketing sites so people understand what you do , and can book a call or join your funnel in two clicks."
               bullets={[
                 "High-converting landing pages",
                 "Email / form / booking integrations",

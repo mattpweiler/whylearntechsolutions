@@ -13,7 +13,7 @@ type FieldProps = {
 function Field({ label, name, type, placeholder, required }: FieldProps) {
   return (
     <div className="space-y-1.5 text-sm">
-      <label htmlFor={name} className="block text-xs font-medium text-slate-200">
+      <label htmlFor={name} className="block text-xs font-medium text-slate-600">
         {label}
       </label>
       <input
@@ -22,7 +22,7 @@ function Field({ label, name, type, placeholder, required }: FieldProps) {
         type={type}
         required={required}
         placeholder={placeholder}
-        className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100 outline-none ring-sky-500/40 placeholder:text-slate-500 focus:border-sky-400 focus:ring-2"
+        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-900 outline-none ring-slate-200 transition focus:border-slate-400 focus:ring-2"
       />
     </div>
   );
@@ -77,14 +77,18 @@ export function ContactSection() {
   return (
     <section id="contact">
       <div className="mx-auto max-w-4xl px-4 py-16 md:py-20">
-        <div className="mb-8 space-y-2 text-center">
-          <h2 className="text-xl font-semibold text-slate-50 md:text-2xl">Tell me what you want built</h2>
-          <p className="text-sm text-slate-300">
+        <div className="mb-8 space-y-3 text-center">
+          <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Start the conversation</p>
+          <h2 className="text-3xl font-semibold text-slate-900 md:text-4xl">Tell me what you want built</h2>
+          <p className="text-sm text-slate-500">
             The more context you share, the more helpful I can be on our first call. You&apos;ll hear back from me personally.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6 rounded-2xl border border-slate-800 bg-slate-900/60 p-6 shadow-xl shadow-sky-500/5">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-2xl shadow-slate-200/80"
+        >
           <div className="grid gap-4 md:grid-cols-2">
             <Field label="Name" name="name" type="text" placeholder="John Doe" required />
             <Field label="Email" name="email" type="email" placeholder="you@example.com" required />
@@ -93,13 +97,13 @@ export function ContactSection() {
           <div className="grid gap-4 md:grid-cols-2">
             <Field label="Company / Project Name (optional)" name="company" type="text" placeholder="Acme Co." />
             <div className="space-y-1.5 text-sm">
-              <label htmlFor="projectType" className="block text-xs font-medium text-slate-200">
+              <label htmlFor="projectType" className="block text-xs font-medium text-slate-600">
                 What are you interested in?
               </label>
               <select
                 id="projectType"
                 name="projectType"
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100 outline-none ring-sky-500/40 placeholder:text-slate-500 focus:border-sky-400 focus:ring-2"
+                className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-900 outline-none ring-slate-200 transition focus:border-slate-400 focus:ring-2"
                 defaultValue=""
                 required
               >
@@ -117,13 +121,13 @@ export function ContactSection() {
 
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-1.5 text-sm">
-              <label htmlFor="budget" className="block text-xs font-medium text-slate-200">
+              <label htmlFor="budget" className="block text-xs font-medium text-slate-600">
                 Rough budget (USD)
               </label>
               <select
                 id="budget"
                 name="budget"
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100 outline-none ring-sky-500/40 placeholder:text-slate-500 focus:border-sky-400 focus:ring-2"
+                className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-900 outline-none ring-slate-200 transition focus:border-slate-400 focus:ring-2"
                 defaultValue=""
               >
                 <option value="" disabled>
@@ -138,13 +142,13 @@ export function ContactSection() {
             </div>
 
             <div className="space-y-1.5 text-sm">
-              <label htmlFor="timeline" className="block text-xs font-medium text-slate-200">
+              <label htmlFor="timeline" className="block text-xs font-medium text-slate-600">
                 Ideal timeline
               </label>
               <select
                 id="timeline"
                 name="timeline"
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100 outline-none ring-sky-500/40 placeholder:text-slate-500 focus:border-sky-400 focus:ring-2"
+                className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-900 outline-none ring-slate-200 transition focus:border-slate-400 focus:ring-2"
                 defaultValue=""
               >
                 <option value="" disabled>
@@ -159,7 +163,7 @@ export function ContactSection() {
           </div>
 
           <div className="space-y-1.5 text-sm">
-            <label htmlFor="details" className="block text-xs font-medium text-slate-200">
+            <label htmlFor="details" className="block text-xs font-medium text-slate-600">
               What software do you want built?
             </label>
             <textarea
@@ -167,13 +171,13 @@ export function ContactSection() {
               name="details"
               rows={5}
               placeholder="Tell me about your idea, current workflow, and what 'successful' looks like for this project..."
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100 outline-none ring-sky-500/40 placeholder:text-slate-500 focus:border-sky-400 focus:ring-2"
+              className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-900 outline-none ring-slate-200 transition focus:border-slate-400 focus:ring-2"
               required
             />
           </div>
 
           <div className="space-y-1.5 text-sm">
-            <label htmlFor="howHeard" className="block text-xs font-medium text-slate-200">
+            <label htmlFor="howHeard" className="block text-xs font-medium text-slate-600">
               How did you find me? (optional)
             </label>
             <input
@@ -181,26 +185,26 @@ export function ContactSection() {
               name="howHeard"
               type="text"
               placeholder="YouTube, Twitter/X, referral, etc."
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100 outline-none ring-sky-500/40 placeholder:text-slate-500 focus:border-sky-400 focus:ring-2"
+              className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-900 outline-none ring-slate-200 transition focus:border-slate-400 focus:ring-2"
             />
           </div>
 
-          <div className="flex flex-col gap-3 border-t border-slate-800 pt-4 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-3 border-t border-slate-200 pt-4 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
             <p>I usually respond within 1–2 business days with next steps or a link to book a call.</p>
             <button
               type="submit"
               disabled={submitting}
-              className="mt-2 inline-flex items-center justify-center rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-sky-500/30 transition hover:bg-sky-400 disabled:cursor-not-allowed disabled:opacity-70 sm:mt-0"
+              className="mt-2 inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-slate-400/30 transition hover:-translate-y-0.5 hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-70 sm:mt-0"
             >
               {submitting ? "Sending..." : "Submit Project Brief"}
             </button>
           </div>
 
           {status === "success" ? (
-            <p className="text-sm font-medium text-emerald-300">Thanks! Your brief is in my inbox and I will get back to you within a few days.</p>
+            <p className="text-sm font-medium text-emerald-600">Thanks! Your brief is in my inbox.</p>
           ) : null}
           {status === "error" ? (
-            <p className="text-sm font-medium text-rose-400">Something went wrong. Please retry or email me directly.</p>
+            <p className="text-sm font-medium text-rose-500">Something went wrong. Please retry or email me directly.</p>
           ) : null}
         </form>
       </div>
