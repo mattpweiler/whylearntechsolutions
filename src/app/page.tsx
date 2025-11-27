@@ -20,15 +20,15 @@ const navCards = [
 
 export default function Home() {
   return (
-    <div className="space-y-20">
+    <div className="space-y-10">
       <section className="overflow-hidden rounded-3xl bg-white px-6 py-12 shadow-2xl shadow-slate-200/60 md:px-10 md:py-16">
         <p className="text-xs uppercase tracking-[0.4em] text-slate-500">WhyLearn</p>
         <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight text-slate-900 md:text-5xl">
-          Build Your Future. One Skill at a Time.
+          Build Your Future with Me.
         </h1>
         <p className="mt-4 max-w-2xl text-base text-slate-600">
-          Hi, I&apos;m Matt. I design thoughtful software, teach what I learn, and help founders integrate AI without the noise.
-          Everything here is crafted for clarity, speed, and real progress.
+          Hi, I&apos;m Matt. I design easy to use software, teach what I learn, and help founders integrate AI without the noise.
+          Everything here is crafted for clarity, speed, and progress.
         </p>
         <div className="mt-8 flex flex-wrap gap-3 text-sm">
           <Link
@@ -82,21 +82,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid gap-10 rounded-3xl border border-slate-200 bg-white/80 p-8 md:grid-cols-2">
-        <div className="space-y-4">
-          <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Why I built this</p>
-          <h3 className="text-2xl font-semibold text-slate-900">WhyLearn is a custom space to build, learn, and share momentum.</h3>
-          <p className="text-sm text-slate-600">
-            The internet feels louder than ever. WhyLearn is my answer: thoughtful videos, documented experiments, and modern software
-            that keeps teams focused on what matters. No fluff, no jargon,just honest tools and stories from the journey.
-          </p>
-        </div>
+      <section className="grid gap-10 rounded-3xl border border-slate-200 bg-white/80 p-8">
         <div className="space-y-4 rounded-3xl border border-slate-200 bg-slate-50 p-6">
           <h4 className="text-lg font-semibold text-slate-900">My mission</h4>
           <ul className="space-y-3 text-sm text-slate-600">
             <li className="flex items-start gap-3">
               <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-900" />
-              Help builders master tools faster with custom, practical education.
+              Help entreprenurs use AI and modern technology to grow their businesses.
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-900" />

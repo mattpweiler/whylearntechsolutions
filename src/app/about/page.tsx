@@ -23,7 +23,7 @@ const timelineEntries = [
     ],
   },
   {
-    period: "2024 - Prenent",
+    period: "2024 - Present",
     title: "Freelance Software Engineering",
     bullets: [
       "Launched WhyLearn to combine consulting, product building, and public learning in one ecosystem.",
@@ -67,6 +67,9 @@ export default function AboutPage() {
         <div className="mt-8 space-y-6">
           {timelineEntries.map((item) => (
             <div key={item.title} className="grid gap-4 rounded-2xl border border-slate-200 bg-slate-50/70 p-5 md:grid-cols-[1fr,3fr]">
+              <div>
+                <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
+                </div>
               <div className="text-sm font-semibold text-slate-500">{item.period}</div>
               <div>
                 <ul className="mt-2 space-y-2 text-sm text-slate-600">
@@ -95,25 +98,6 @@ export default function AboutPage() {
             className="inline-flex items-center rounded-full border border-slate-900 px-5 py-2 text-sm font-semibold text-slate-900 transition hover:-translate-y-0.5"
           >
             See what I&apos;ve built
-          </Link>
-        </div>
-      </section>
-
-      <section className="rounded-3xl border border-slate-200 bg-slate-900 px-8 py-10 text-white">
-        <div className="space-y-4">
-          <p className="text-xs uppercase tracking-[0.3em] text-slate-300">Next step</p>
-          <h2 className="text-3xl font-semibold">Ready to collaborate?</h2>
-          <p className="text-sm text-slate-200">
-            I partner with founders and small teams to scope, build, and launch custom software and AI systems. Let&apos;s talk about
-            what you&apos;re building and how I can help.
-          </p>
-          <Link
-            href="https://cal.com/whylearntech/60mins"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center rounded-full bg-[#1f4ed8] px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/30 transition hover:-translate-y-0.5 hover:bg-[#1b44c2]"
-          >
-            Book a Call
           </Link>
         </div>
       </section>

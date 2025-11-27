@@ -76,7 +76,7 @@ export function ContactSection() {
 
   return (
     <section id="contact">
-      <div className="mx-auto max-w-4xl px-4 py-16 md:py-20">
+      <div className="mx-auto max-w-4xl px-4 py-4">
         <div className="mb-8 space-y-3 text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Start the conversation</p>
           <h2 className="text-3xl font-semibold text-slate-900 md:text-4xl">Tell me what you want built</h2>

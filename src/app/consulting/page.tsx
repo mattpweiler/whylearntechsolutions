@@ -27,7 +27,7 @@ const pricing = [
     title: "Strategy Intensive (optional)",
     price: "$120",
     body: "A 60-minute call to audit your idea, answer questions, and hand you a roadmap before we build.",
-    details: ["Recording + notes", "Stack recommendations", "Prioritized next steps"],
+    details: ["Full Plan an Next Steps to Move Forward with Your Project", "Stack recommendations", "Prioritized next steps"],
   },
 ];
 

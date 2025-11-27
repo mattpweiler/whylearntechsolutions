@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const freelanceClients = ["Tutor", "Vesta", "Dylan", "Logan", "Indie creators", "Boutique agencies"];
+const freelanceClients = ["Karen - Custom Tutoring application", "Owen - Construction Client Management Tool", "Dylan - Custom GPT for His Clients", "Logan - Sports AI Analytics", "Ray - Help With His Music Marketplace App", "Matt - Health Tracking App"];
 
 export default function BuiltPage() {
   return (
@@ -19,22 +19,17 @@ export default function BuiltPage() {
           <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Enterprise experience</p>
           <h2 className="text-2xl font-semibold text-slate-900">Insurance platforms for Fortune 500s</h2>
           <p className="text-sm text-slate-600">
-            As a lead engineer inside a Fortune 500 insurance org, I helped design underwriting tools, internal CRMs, and claims automations
-            that serviced millions in premium. Heavy compliance, zero downtime expectations, and long feedback loops taught me how to ship
-            resilient systems.
+            As a lead engineer inside 2 different Fortune 500 insurance companies, 
+            I helped design customer facing insurance sales software and internal data systems. These systems were scalable and used by thousands of external and internal users.
           </p>
           <ul className="space-y-2 text-sm text-slate-600">
             <li className="flex items-start gap-3">
               <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-900" />
-              Modernized internal policy applications with secure workflows, role-based access, and strict auditing trails.
+            Senior Level React / Next JS manager for applications 
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-900" />
-              Built dashboards for executives to track risk, underwriting throughput, and revenue projections.
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-900" />
-              Connected legacy systems with modern APIs to speed up quoting and reduce manual operations.
+              Built dashboards for internal use and data systems.
             </li>
           </ul>
         </div>
@@ -55,8 +50,8 @@ export default function BuiltPage() {
       </section>
 
       <section className="rounded-3xl border border-slate-200 bg-white/90 p-8">
-        <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Freelance & advisory</p>
-        <h2 className="mt-3 text-2xl font-semibold text-slate-900">Client partners</h2>
+        <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Freelance Work and Clients</p>
+        <h2 className="mt-3 text-2xl font-semibold text-slate-900">My Freelance Projects</h2>
         <p className="mt-2 text-sm text-slate-600">
           I collaborate closely with founders who need someone that can plan, design, and build without the agency overhead.
         </p>
