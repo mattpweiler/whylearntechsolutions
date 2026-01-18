@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { ContactSection } from "@/components/ContactSection";
 
 const consultingCategories = [
@@ -220,13 +221,15 @@ export default function ConsultingPage() {
         </div>
       </section>
 
-      <ContactSection
-        id="start"
-        eyebrow="Project intake"
-        title="Tell us what to build"
-        description="Include context on data sources, users, and deadlines. We respond with scope, architecture notes, and options to get started."
-        ctaLabel="Request Proposal"
-      />
+      <Suspense fallback={null}>
+        <ContactSection
+          id="start"
+          eyebrow="Project intake"
+          title="Tell us what to build"
+          description="Include context on data sources, users, and deadlines. We respond with scope, architecture notes, and options to get started."
+          ctaLabel="Request Proposal"
+        />
+      </Suspense>
     </div>
   );
 }

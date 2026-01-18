@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { ContactSection } from "@/components/ContactSection";
 
 const productCategories = [
@@ -189,7 +190,9 @@ export default function Home() {
         </div>
       </section>
 
-      <ContactSection />
+      <Suspense fallback={null}>
+        <ContactSection />
+      </Suspense>
     </div>
   );
 }

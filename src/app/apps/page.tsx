@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import { ContactSection } from "@/components/ContactSection";
 import { PricingRangeCard } from "@/components/PricingRangeCard";
 
@@ -349,12 +349,14 @@ export default function AppsPage() {
         </div>
       </section>
 
-      <ContactSection
-        eyebrow="Get access"
-        title="Tell us what product you need"
-        description="If you want a demo, sandbox access, or a tailored implementation, share your data sources and target outcomes."
-        ctaLabel="Request Access"
-      />
+      <Suspense fallback={null}>
+        <ContactSection
+          eyebrow="Get access"
+          title="Tell us what product you need"
+          description="If you want a demo, sandbox access, or a tailored implementation, share your data sources and target outcomes."
+          ctaLabel="Request Access"
+        />
+      </Suspense>
     </div>
   );
 }
