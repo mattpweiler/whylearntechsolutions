@@ -1,13 +1,5 @@
 import { NextResponse } from "next/server";
 
-const PROJECT_TYPES = new Set([
-  "custom-gpt",
-  "internal-tool",
-  "website",
-  "advisory",
-  "other",
-]);
-
 const BUDGET_RANGES = new Set(["<1000", "1000-5000", "5000-1000", ">10000"]);
 
 const TIMELINES = new Set(["asap", "1-3", "3-6", "flexible"]);
@@ -54,27 +46,6 @@ export async function POST(request: Request) {
   if (!name || !email || !details || !projectType) {
     return NextResponse.json(
       { error: "Missing required fields" },
-      { status: 400 },
-    );
-  }
-
-  if (!PROJECT_TYPES.has(projectType)) {
-    return NextResponse.json(
-      { error: "Invalid project type" },
-      { status: 400 },
-    );
-  }
-
-  if (budget && !BUDGET_RANGES.has(budget)) {
-    return NextResponse.json(
-      { error: "Invalid budget range" },
-      { status: 400 },
-    );
-  }
-
-  if (timeline && !TIMELINES.has(timeline)) {
-    return NextResponse.json(
-      { error: "Invalid timeline" },
       { status: 400 },
     );
   }
