@@ -22,7 +22,7 @@ export function SiteFooter() {
             Email
           </a>
         </div>
-        <p className="text-xs text-slate-400">© {new Date().getFullYear()} WhyLearn. All rights reserved.</p>
+        <p className="text-xs text-slate-400">© {new Date().getFullYear()} WhyLearnTech LLC. All rights reserved.</p>
       </div>
     </footer>
   );

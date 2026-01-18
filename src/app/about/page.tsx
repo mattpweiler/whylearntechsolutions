@@ -17,7 +17,7 @@ const timelineEntries = [
     title: "YouTube & teaching",
     icon: true,
     bullets: [
-      "Grew @WhyLearnTech to 60k subs by treating it like a public lab of life, entrepreneurship, finance, and gaming experiments.",
+      "Grew @WhyLearnTech to 75k subs by treating it like a public lab of life, entrepreneurship, finance, and gaming experiments.",
       "Share practical life advice for leveling up your income and staying consistent.",
       "Consult creators and founders on growing online brands with honest storytelling.",
     ],

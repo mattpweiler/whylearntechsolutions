@@ -12,7 +12,7 @@ const navCards = [
     href: "/consulting",
   },
   {
-    title: "WhyLearn Apps",
+    title: "WhyLearnTech Apps",
     description: "Upcoming tools crafted for creators and operators. Follow along as they come to life.",
     href: "/apps",
   },
