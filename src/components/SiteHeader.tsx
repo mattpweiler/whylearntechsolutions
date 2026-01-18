@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Me" },
-  { href: "/consulting", label: "Software Consulting" },
-  { href: "/apps", label: "Apps for You" },
+  { href: "/consulting", label: "Tech Consulting" },
+  { href: "/apps", label: "Apps For You" },
 ];
 
 export function SiteHeader() {
@@ -38,12 +38,10 @@ export function SiteHeader() {
         </nav>
 
         <Link
-          href="https://cal.com/whylearntech/60mins"
-          target="_blank"
-          rel="noreferrer"
+          href="/consulting#start"
           className="hidden rounded-full border border-slate-900 px-4 py-1.5 text-sm font-medium text-slate-900 transition hover:-translate-y-0.5 md:inline-flex"
         >
-          Book a Call
+          Start a Project
         </Link>
       </div>
     </header>

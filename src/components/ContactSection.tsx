@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 type FieldProps = {
   label: string;
@@ -28,9 +29,37 @@ function Field({ label, name, type, placeholder, required }: FieldProps) {
   );
 }
 
-export function ContactSection() {
+type ContactSectionProps = {
+  id?: string;
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  defaultProjectType?: string;
+  ctaLabel?: string;
+};
+
+const projectOptions = [
+  { value: "rag-software", label: "Document AI / knowledge retrieval" },
+  { value: "saas-tools", label: "SaaS tools, portals, and dashboards" },
+  { value: "ai-integrations", label: "AI integrations into existing products" },
+  { value: "web-systems", label: "Customer-facing sites & internal systems" },
+  { value: "prediction-engines", label: "AI prediction engines" },
+  { value: "advisory", label: "Advisory / architecture review" },
+  { value: "other", label: "Something else" },
+];
+
+export function ContactSection({
+  id = "start",
+  eyebrow = "Start the conversation",
+  title = "Start a project with WhyLearnTech",
+  description = "Share your goals, constraints, and data landscape. We respond with a plan or a link to book a technical call.",
+  defaultProjectType,
+  ctaLabel = "Submit Project Brief",
+}: ContactSectionProps) {
   const [submitting, setSubmitting] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const searchParams = useSearchParams();
+  const selectedProjectType = searchParams.get("projectType") || defaultProjectType || "";
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -75,14 +104,12 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact">
-      <div className="mx-auto max-w-4xl px-4 py-4">
+    <section id={id}>
+      <div className="mx-auto py-4">
         <div className="mb-8 space-y-3 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Start the conversation</p>
-          <h2 className="text-3xl font-semibold text-slate-900 md:text-4xl">Tell me what you want built</h2>
-          <p className="text-sm text-slate-500">
-            The more context you share, the more helpful I can be on our first call. You&apos;ll hear back from me personally.
-          </p>
+          <p className="text-xs uppercase tracking-[0.3em] text-slate-500">{eyebrow}</p>
+          <h2 className="text-3xl font-semibold text-slate-900 md:text-4xl">{title}</h2>
+          <p className="text-sm text-slate-500">{description}</p>
         </div>
 
         <form
@@ -104,17 +131,17 @@ export function ContactSection() {
                 id="projectType"
                 name="projectType"
                 className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-900 outline-none ring-slate-200 transition focus:border-slate-400 focus:ring-2"
-                defaultValue=""
+                defaultValue={selectedProjectType}
                 required
               >
                 <option value="" disabled>
                   Select an option
                 </option>
-                <option value="custom-gpt">Custom GPT / AI assistant (RAG)</option>
-                <option value="internal-tool">Internal tool / dashboard / mini-CRM</option>
-                <option value="website">Landing page / simple website</option>
-                <option value="advisory">Strategy / advisory call only</option>
-                <option value="other">Something else</option>
+                {projectOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
@@ -138,7 +165,7 @@ export function ContactSection() {
                 <option value="5000-1000">$5,000 – $10,000</option>
                 <option value=">10000">Over $10,000</option>
               </select>
-              <p className="text-[11px] text-slate-500">This just helps me understand what&apos;s realistic.</p>
+            <p className="text-[11px] text-slate-500">This helps shape the build and deployment plan.</p>
             </div>
 
             <div className="space-y-1.5 text-sm">
@@ -157,6 +184,8 @@ export function ContactSection() {
                 <option value="asap">ASAP (next 2–4 weeks)</option>
                 <option value="1-3">1–3 months</option>
                 <option value="3-6">3–6 months</option>
+                <option value="1yr">1 Year</option>
+                <option value="2yr">2 or More Years</option>
                 <option value="flexible">Flexible / not urgent</option>
               </select>
             </div>
@@ -164,13 +193,13 @@ export function ContactSection() {
 
           <div className="space-y-1.5 text-sm">
             <label htmlFor="details" className="block text-xs font-medium text-slate-600">
-              What software do you want built?
+              What should this product or system achieve?
             </label>
             <textarea
               id="details"
               name="details"
               rows={5}
-              placeholder="Tell me about your idea, current workflow, and what 'successful' looks like for this project..."
+              placeholder="Tell me about your data sources, users, the workflow you want to replace, and how we’ll know it’s working..."
               className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-900 outline-none ring-slate-200 transition focus:border-slate-400 focus:ring-2"
               required
             />
@@ -190,13 +219,13 @@ export function ContactSection() {
           </div>
 
           <div className="flex flex-col gap-3 border-t border-slate-200 pt-4 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-            <p>I usually respond within 1–2 business days with next steps or a link to book a call.</p>
+            <p>I respond within 1–2 business days with a brief plan, pricing range, or a link to book a technical call.</p>
             <button
               type="submit"
               disabled={submitting}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-slate-400/30 transition hover:-translate-y-0.5 hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-70 sm:mt-0"
             >
-              {submitting ? "Sending..." : "Submit Project Brief"}
+              {submitting ? "Sending..." : ctaLabel}
             </button>
           </div>
 

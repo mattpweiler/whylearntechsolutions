@@ -4,7 +4,7 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="font-semibold text-slate-900">WhyLearn</p>
-          <p className="text-xs text-slate-500">Build your future one skill at a time.</p>
+          <p className="text-xs text-slate-500">AI software studio building production-grade products and systems.</p>
         </div>
         <div className="flex flex-wrap gap-4 text-sm font-medium">
           <a

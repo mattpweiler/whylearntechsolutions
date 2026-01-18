@@ -56,10 +56,10 @@ export function ServicesSection() {
           <div className="grid gap-4 sm:grid-cols-2">
             <ServiceCard
               title="Custom GPTs & AI Assistants"
-              tag="RAG · Automation"
-              description="Private GPT-style chatbots over your docs, Notion, SOPs, and data. Let your team ask questions in plain English instead of digging through folders."
+              tag="Document AI · Automation"
+              description="Private GPT-style chatbots over your docs, Notion, SOPs, and data using retrieval-augmented generation (RAG). Let your team ask questions in plain English instead of digging through folders."
               bullets={[
-                "RAG pipelines over PDFs, docs, or APIs",
+                "Document AI pipelines (RAG) over PDFs, docs, or APIs",
                 "Chat-style interfaces your team actually uses",
                 "Deployed with simple dashboards & access control",
               ]}
